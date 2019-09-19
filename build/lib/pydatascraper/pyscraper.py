@@ -395,7 +395,7 @@ def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
     writer.book = load_workbook(filename)
    
     # get the last row in the existing Excel sheet
-    # if it was not specified explicitly
+    # if it was not specified explicitly.
     if startrow is None and sheet_name in writer.book.sheetnames:
         startrow = writer.book[sheet_name].max_row
 
@@ -508,7 +508,7 @@ def location_parser(urls):
                     else:
                         data = method(url, soup, td, branches)
                 except TypeError:
-                    # Can't handle methods with required arguments.
+                    # Can't handle methods with required arguments
                     pass
                 if data is None:
                     pass
