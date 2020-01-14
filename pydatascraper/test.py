@@ -21,7 +21,8 @@ class TestGetOptions(unittest.TestCase):
 class TestLocations(unittest.TestCase):
     def test_child_tree1_with_valid_input(self):
         url = "https://www.marianilandscape.com/where-we-are/"
-        soup = get_soup_function(url)  # Replace get_soup_function with actual function to get soup object
+        # Replace get_soup_function with actual function to get soup object
+        soup = get_soup_function(url)  
         td = "Some TD"
         branches = "Some Branches"
         result = locations.child_tree1(url, soup, td, branches)
@@ -30,7 +31,8 @@ class TestLocations(unittest.TestCase):
 
     def test_child_tree2_with_valid_input(self):
         url = "https://landscapedevelopment.com/contact/"
-        soup = get_soup_function(url)  # Replace get_soup_function with actual function to get soup object
+        # Replace get_soup_function with actual function to get soup object
+        soup = get_soup_function(url)  
         td = "Some TD"
         branches = "Some Branches"
         result = locations.child_tree2(url, soup, td, branches)
@@ -39,7 +41,8 @@ class TestLocations(unittest.TestCase):
 
     def test_child_tree3_with_valid_input(self):
         url = "https://www.yellowstonelandscape.com/locations"
-        soup = get_soup_function(url)  # Replace get_soup_function with actual function to get soup object
+        # Replace get_soup_function with actual function to get soup object
+        soup = get_soup_function(url)  
         td = "Some TD"
         branches = "Some Branches"
         result = locations.child_tree3(url, soup, td, branches)
