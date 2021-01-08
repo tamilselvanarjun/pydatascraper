@@ -39,7 +39,7 @@ def get_options(scrambled, flag, totals, last):
         else:
             return get_options("", True, totals, '')
 class locations:
-    #https://www.marianilandscape.com/where-we-are/
+    
     def child_tree1(url, soup, td, branches):
        
         tsd, td, tsu = extract(url)
