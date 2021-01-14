@@ -1071,13 +1071,26 @@ def preprocessing():
     downloadbutton.place(x=180, y=370)
 
 def show():
+    """
+    This function displays different content based on the selected option in a dropdown menu.
+
+    It retrieves the selected option from the dropdown menu, removes unnecessary widgets if more than
+    two are present, and then displays the corresponding content based on the selected option.
+
+    Available options:
+    - "Web Scraping": Displays preprocessing content.
+    - "Google reviews": Displays Google reviews content.
+    - "Yelp reviews": Displays Yelp reviews content.
+    - "Open Street Map": Displays Open Street Map reviews content.
+    """
     text = clicked.get()
     removeable = []
     for ele in root.winfo_children():
-        if len(removeable) >2:
+        if len(removeable) > 2:
             ele.destroy()
         else:
             removeable.append(ele.widgetName)
+           
     if text == "Web Scraping":
         preprocessing()
     if text == "Google reviews":
@@ -1086,6 +1099,7 @@ def show():
         yelp_reviews()
     if text == "Open Street Map":
         open_street_reviews()
+
        
 
 def main():
