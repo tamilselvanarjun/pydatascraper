@@ -1094,8 +1094,6 @@ def main():
     root = Tk()
     root.title("DataHarvest GPT")
     root.geometry("500x500")
-
-
     service = []
     cols = ["Services", "Description"]
     link_site = []
@@ -1103,8 +1101,6 @@ def main():
     h2 = 'h2'
     h3 ='h3'
     new_urls = []
-
-
     options = [
             "Web Scraping",
         "Yelp reviews",
@@ -1114,7 +1110,6 @@ def main():
 
     # Set the background color to blue
     root.configure(bg='lightgreen')
-
     # Set the border color to red
     root.configure(bd=10, highlightbackground='red')
     txt = 'AI Web Data Parser'
