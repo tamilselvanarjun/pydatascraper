@@ -4,7 +4,6 @@ from pyscraper import get_options, locations
 class TestGetOptions(unittest.TestCase):
     def test_get_options_with_valid_input(self):
         """Test get_options function with valid input.
-
         This test case checks the behavior of the get_options function when provided with valid input parameters.
         """
         scrambled = "etcbat"

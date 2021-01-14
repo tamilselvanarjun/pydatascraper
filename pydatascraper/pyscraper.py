@@ -1078,9 +1078,6 @@ def show():
             ele.destroy()
         else:
             removeable.append(ele.widgetName)
-           
-        #ele.widgetName), type(ele))
-        #
     if text == "Web Scraping":
         preprocessing()
     if text == "Google reviews":
