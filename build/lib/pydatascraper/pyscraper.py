@@ -389,7 +389,7 @@ def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
 
     writer = pd.ExcelWriter(filename, engine='openpyxl', mode='a')
 
-   
+    # try to open an existing workbook
     writer.book = load_workbook(filename)
    
     # get the last row in the existing Excel sheet
