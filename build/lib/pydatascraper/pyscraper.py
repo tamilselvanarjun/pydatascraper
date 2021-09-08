@@ -1106,10 +1106,10 @@ def main():
             "Open Street Map"
         ]
 
-    # Set the background color to blue
+    # Set the background color to blue.
     root.configure(bg='lightgreen')
 
-    # Set the border color to red
+    # Set the border color to red.
     root.configure(bd=10, highlightbackground='red')
     txt = 'AI Web Data Parser'
     lbl = Label(root, text=txt, font='Bell 24 bold', fg='black', bg='orange', width=20)
