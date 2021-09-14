@@ -372,7 +372,7 @@ class locations:
 def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
                        truncate_sheet=False,
                        **to_excel_kwargs):
-       # Excel file doesn't exist - saving and exiting
+       
     if not filename.endswith('xlsx'):
         filename = filename + '.xlsx'
     if not os.path.isfile(filename):
