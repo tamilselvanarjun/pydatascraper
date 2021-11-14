@@ -383,7 +383,7 @@ def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
             **to_excel_kwargs)
         return
    
-    # ignore [engine] parameter if it was passed
+   
     if 'engine' in to_excel_kwargs:
         to_excel_kwargs.pop('engine')
 
