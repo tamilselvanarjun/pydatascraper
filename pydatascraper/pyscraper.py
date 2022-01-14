@@ -1047,8 +1047,6 @@ def google_reviews():
     button.place(x=180, y=300)
 
 def preprocessing():
-    #print(text)
-    #label.config(text = text)
     label1 = Label(root,text="Please enter the URL",font=('arial',16),fg="black", bg="lightgreen")
     label1.place(x=150,y=140)
     global entry1, entry2
