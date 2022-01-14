@@ -1047,25 +1047,45 @@ def google_reviews():
     button.place(x=180, y=300)
 
 def preprocessing():
-    label1 = Label(root,text="Please enter the URL",font=('arial',16),fg="black", bg="lightgreen")
-    label1.place(x=150,y=140)
+    """
+    This function sets up the preprocessing interface for web scraping.
+
+    It creates labels, text entry fields, buttons, and dropdown menus necessary for inputting
+    the URL, selecting data types, entering a file name, and initiating the download process.
+
+    Widgets created:
+    - label1: Prompt to enter the URL.
+    - entry1: Text entry field for the URL.
+    - printButton: Button to initiate category retrieval.
+    - label2: Display of available data types.
+    - clicked: StringVar for the dropdown menu selection.
+    - label3: Prompt to enter the file name.
+    - entry2: Text entry field for the file name.
+    - downloadbutton: Button to start the download process.
+
+    Commands:
+    - printButton command: Calls the get_categories function.
+    - downloadbutton command: Calls the execute_script function to initiate the download.
+    """
+    label1 = Label(root, text="Please enter the URL", font=('arial', 16), fg="black", bg="lightgreen")
+    label1.place(x=150, y=140)
     global entry1, entry2
     entry1 = Text(root, width=30, height=1)
     entry1.place(x=130, y=180)
-    printButton = Button(root, width = 10,
-                            text = "Search",
-                            command = get_categories)
-   
+
+    printButton = Button(root, width=10, text="Search", command=get_categories)
     printButton.place(x=380, y=175)
 
-    label2 = Label(root, text= "Types of data available", font= ('arial', 16),fg="black", bg="lightgreen")
-    label2.place(x=130,y=220)
+    label2 = Label(root, text="Types of data available", font=('arial', 16), fg="black", bg="lightgreen")
+    label2.place(x=130, y=220)
     clicked = StringVar(root)
-    label3 = Label(root,text="Enter name to save file",font=('arial',16),fg="black", bg="lightgreen")
-    label3.place(x=130,y=300)
-    entry2 = Entry(root, width = 35)
+
+    label3 = Label(root, text="Enter name to save file", font=('arial', 16), fg="black", bg="lightgreen")
+    label3.place(x=130, y=300)
+    entry2 = Entry(root, width=35)
     entry2.place(x=130, y=340)
-    downloadbutton = Button(root,width=10, text=" Download",command = execute_script)
+
+    downloadbutton = Button(root, width=10, text=" Download", command=execute_script)
     downloadbutton.place(x=180, y=370)
 
 def show():
