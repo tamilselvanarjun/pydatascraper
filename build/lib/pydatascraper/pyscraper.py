@@ -1115,7 +1115,7 @@ def main():
             "Open Street Map"
         ]
 
-    # Set the background color to blue
+    
     root.configure(bg='lightgreen')
 
     # Set the border color to red
