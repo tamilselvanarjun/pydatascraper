@@ -403,7 +403,7 @@ def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
         idx = writer.book.sheetnames.index(sheet_name)
         # remove [sheet_name]
         writer.book.remove(writer.book.worksheets[idx])
-        # create an empty sheet [sheet_name] using old index.
+        
         writer.book.create_sheet(sheet_name, idx)
    
     # copy existing sheets.
