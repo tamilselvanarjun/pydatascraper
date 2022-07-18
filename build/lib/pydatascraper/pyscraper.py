@@ -23,15 +23,7 @@ from tkinter import Tk, Label, OptionMenu, StringVar, Button, font
 
 
 
-#https://gothiclandscape.com/
-#https://www.marianilandscape.com/where-we-are/
-#https://www.yellowstonelandscape.com/locations -NA
-# https://www.ruppertlandscape.com/     -----Forbidden
-# https://www.schilllandscaping.com/   no locations
-#https://www.junipercares.com/
-# https://sebert.com/       no locations
-# https://uslawns.com/
-#https://landscapedevelopment.com/contact/
+
 def get_options(scrambled, flag, totals, last):
     dictionary = [i.strip('\n') for i in open('the_file.txt')]
     if flag:
