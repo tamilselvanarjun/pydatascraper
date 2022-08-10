@@ -616,9 +616,7 @@ def execute_script():
            output = entry2.get()
            print('dropdown')
            if dropdown_value == 'locations' or 'branch' in dropdown_value:
-               #myscript = threading.Thread(target=location_parser, args=(given_url,))
-               #print(given_url)
-               #myscript.start()
+               
                list_data = location_parser(given_url)
                fields =  ["Parent Company", "Sub-Brand (if relevant)",
                           "Branch Type (If relevant)", "Street", "City", "State", "Zip Code", "Other Comments", "Link"]
