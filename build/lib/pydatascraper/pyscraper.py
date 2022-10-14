@@ -527,7 +527,7 @@ def single_url(soup):
     tags = {tag.name for tag in soup.find_all()}
     # iterate all tags
     for tag in tags:
-        
+        # find all element of tag
         for i in soup.find_all( tag ):
             # if tag has attribute of class
             if i.has_attr( "class" ):
