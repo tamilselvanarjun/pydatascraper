@@ -1161,7 +1161,7 @@ def main():
     lbl.place(x=80,y=30)
     def animate_label(text, n=0):
         if n < len(text)-1:
-            
+            # not complete yet, schedule next run one second later
             lbl.after(1000, animate_label, text, n+1)
         # update the text of the label
         lbl['text'] = text[:n+1]
