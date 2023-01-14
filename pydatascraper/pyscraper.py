@@ -991,13 +991,11 @@ def yelp_reviews():
 
 def google_execute_script():
     given_url = entry2.get()
-    print(given_url)
     if given_url.startswith('http') or given_url.startswith('www'):
         tsd, td, tsu = extract(given_url)
         td  = ' '.join(get_options(td, False, [], '')).capitalize()
     else:
         td = given_url
-        print(td)
         td = td.replace(' ', "%20")
         url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input="
         url3= "&inputtype=textquery&fields=place_id&key=AIzaSyDMg-POYO8aPVIX4rOhUZqGus4GfdoMtXE"
@@ -1005,7 +1003,6 @@ def google_execute_script():
         payload={}
         headers = {}
         response = requests.request("GET", url, headers=headers, data=payload)
-        print(response.status_code)
         response = response.json()
         try:
             response = response['candidates'][0]['place_id']
@@ -1016,8 +1013,6 @@ def google_execute_script():
             review_response = review_response.json()["result"]['reviews']
             df = pd.DataFrame(review_response)
             cols = list(df.columns)
-            print('here')
-            print(entry_3.get())
             new_cols = []
             for col in cols:
                 new_cols.append(col.capitalize())
