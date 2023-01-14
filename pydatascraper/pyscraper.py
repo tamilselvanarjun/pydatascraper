@@ -1034,17 +1034,36 @@ def google_execute_script():
             tkinter.messagebox.showinfo("Web scrapping result", "Reviews not found")
 
 def google_reviews():
-    label = Label(root,text="Please enter the Text",font=('arial',16),fg="black")
-    label.place(x=150,y=140)
+    """
+    This function sets up the interface for extracting Google reviews.
+
+    It creates labels, text entry fields, and a button necessary for inputting the review text,
+    specifying the file name for saving, and initiating the download process for Google reviews.
+
+    Widgets created:
+    - label: Prompt to enter the review text.
+    - entry2: Text entry field for the review text.
+    - label_2: Prompt to enter the file name for saving.
+    - entry_3: Text entry field for the file name.
+    - button: Button to start the download process.
+
+    Command:
+    - button command: Calls the google_execute_script function to initiate the download of Google reviews.
+    """
+    label = Label(root, text="Please enter the Text", font=('arial', 16), fg="black")
+    label.place(x=150, y=140)
     global entry2, entry_3
     entry2 = Entry(root, width=40)
     entry2.place(x=150, y=190)
-    label_2 = Label(root,text="Enter name for save file",font=('arial',16),fg="black")
-    label_2.place(x=140,y=230)
-    entry_3 = Entry(root, width = 35)
+
+    label_2 = Label(root, text="Enter name for save file", font=('arial', 16), fg="black")
+    label_2.place(x=140, y=230)
+    entry_3 = Entry(root, width=35)
     entry_3.place(x=150, y=270)
-    button = Button(root,width=10, text=" Download",command = google_execute_script)
+
+    button = Button(root, width=10, text=" Download", command=google_execute_script)
     button.place(x=180, y=300)
+
 
 def preprocessing():
     """
