@@ -320,9 +320,7 @@ class locations:
                 if h3 in all_tags:
                     try:
                         if all_div.h3.text in service and all_div.h3.text not in adder:
-                            #adder.append(all_div.h3.text)
-                            #print(list(zip([all_div.h3.text], [all_div.p.text])))S
-                            #df = pd.DataFrame(list(zip([all_div.h3.text], [all_div.p.text])) ,columns = cols)
+                           
                             sample_text = all_div.p.text
                             address = sample_text.split('\n')[0].split(',')[0]
                             textlabel = sample_text.split('\n')[0].split(',')[1].split('P:')[0]
