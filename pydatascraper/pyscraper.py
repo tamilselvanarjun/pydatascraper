@@ -1166,7 +1166,7 @@ def main():
         # update the text of the label
         lbl['text'] = text[:n+1]
 
-    
+    # start the "after loop" one second later
     root.after(1000, animate_label, txt)
     c = options
     #root.configure( bg = 'white')
