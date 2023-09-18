@@ -1177,7 +1177,7 @@ def main():
     #main_menu.config(font=helv36)
     main_menu.place(x= 150, y =85)
     font_properties = ('Arial', 10, 'bold')  # Font name, size, and style
-    # Create a bold font for the default text
+    
     bold_font = font.Font(family=font_properties[0], size=font_properties[1], weight='bold')
     main_menu.config(width = 12, font=bold_font)
     # Create button, it will change label text
