@@ -1,6 +1,7 @@
 ### pydatascraper
 
-pydatascraper is a Python application equipped with web scraping functionalities, enabling the extraction of Google and Yelp reviews. It features an intuitive graphical user interface (GUI) for effortless user interaction.
+pydatascraper is a Python application that provides web scraping capabilities, including fetching Google and Yelp reviews. The application has a user-friendly graphical user interface (GUI) for easy interaction.
+
 ### Features
 
 - **Web Scraping:** Extract information from web pages based on user-provided URLs.
