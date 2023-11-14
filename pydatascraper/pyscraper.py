@@ -504,7 +504,7 @@ def location_parser(urls):
                     else:
                         data = method(url, soup, td, branches)
                 except TypeError:
-                    # Can't handle methods with required arguments.
+                    
                     pass
                 if data is None:
                     pass
