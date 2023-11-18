@@ -1180,7 +1180,7 @@ def main():
     # Create a bold font for the default text
     bold_font = font.Font(family=font_properties[0], size=font_properties[1], weight='bold')
     main_menu.config(width = 12, font=bold_font)
-    # Create button, it will change label text
+    
     button = Button( root , text = "start" , width = 10,font='sans 10 bold', command = show )
     button.place(x=320, y=87)
     root.mainloop()
