@@ -1,3 +1,21 @@
+Metadata-Version: 2.1
+Name: pydatascraper
+Version: 1.0.3
+Summary: A Python application that provides web scraping capabilities, including fetching Google and Yelp reviews.
+Home-page: https://github.com/arjunlimat/pydatascraper
+Author: Tamilselvan_Arjunan
+Author-email: nishantamil@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: pandas
+Requires-Dist: tldextract
+Requires-Dist: openpyxl
+
 ### pydatascraper
 
 pydatascraper is a Python application that provides web scraping capabilities, including fetching Google and Yelp reviews. The application has a user-friendly graphical user interface (GUI) for easy interaction.
