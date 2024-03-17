@@ -936,20 +936,20 @@ def yelp_execute_script():
         url = url + part_url
         response = requests.request('GET', url, headers=yelp_headers, verify=False)
         #response = requests.request('GET', url, headers=headers, params=url_params, verify=False)
-        print(response.status_code)
-        store_data = []
         response = response.json()['reviews']
-        print(response)
-        for i in response:
-            processed_item = {}
-            processed_item['Username'] = i['user']['name']
-            processed_item['URL']  = i['url']
-            processed_item['Comments']   = i['text']
-            processed_item['Rating']  = i['rating']
-            processed_item['Created Time'] = i['time_created']
-            store_data.append(processed_item)
-       
-        df = pd.DataFrame(store_data)
+        processed_data = [
+            {
+                'Username': item['user']['name'],
+                'URL': item['url'],
+                'Comments': item['text'],
+                'Rating': item['rating'],
+                'Created Time': item['time_created']
+            }
+            for item in response
+        ]
+
+        # Create a DataFrame directly from the processed data
+        df = pd.DataFrame(processed_data)
         cols = list(df.columns)
         new_cols = []
         for col in cols:
