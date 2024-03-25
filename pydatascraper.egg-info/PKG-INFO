@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pydatascraper
-Version: 1.0.3
+Version: 1.0.4
 Summary: A Python application that provides web scraping capabilities, including fetching Google and Yelp reviews.
 Home-page: https://github.com/arjunlimat/pydatascraper
 Author: Tamilselvan_Arjunan
@@ -49,42 +49,42 @@ pydatascraper is a Python application that provides web scraping capabilities, i
 
 2. Install the package directly:
 
-```bash
+```
 
-	pip install pydatascraper
+pip install pydatascraper
 
 ```
 3. import the webscraper model:
 
-```bash
-	from pydatascraper.models import main
+```
+from pydatascraper.pyscraper import main
 ```
 4. Run the application:
-```bash
-	main()
+```
+main()
 ```
 
 The GUI will appear, allowing you to choose different services and perform web scraping tasks.
 
-Services
+#### Services
 Web Scraping
 
 Enter a URL and click "Search" to explore available data types.
 
 Choose the desired data type, enter a file name, and click "Download" to save the data.
 
-Google Reviews
+#### Google Reviews
 Select "Google reviews" from the services dropdown.
 
 Enter the business or location name and address.
 Provide a file name and click "Download" to fetch and save Google reviews.
 
-Yelp Reviews
+#### Yelp Reviews
 Select "Yelp reviews" from the services dropdown.
 Enter the business name and address.
 Provide a file name and click "Download" to fetch and save Yelp reviews.
 
-OpenStreetMap
+#### OpenStreetMap
 Select "Open Street Map" from the services dropdown.
 Enter the map URL, provide a file name, and click "Download" to extract map data.
 

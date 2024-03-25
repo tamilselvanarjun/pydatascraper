@@ -5,26 +5,20 @@ with open('README.md', 'r', encoding='utf-8') as f:
     
 setup(
     name='pydatascraper',
-    version='1.0.3',
-    packages=find_packages(),
+    version='1.0.4',
+    packages=['pydatascraper'],  # Explicitly include your main package here
     install_requires=[
-    'requests',
-    'beautifulsoup4',
-    'pandas',
-    'tldextract',
-    'openpyxl',
+        'requests',
+        'beautifulsoup4',
+        'pandas',
+        'tldextract',
+        'openpyxl',
     ],
-
-    entry_points={
-       'console_scripts': [
-            'pydatascraper = pydatascraper.models:main',
-        ],
-    },
     author='Tamilselvan_Arjunan',
     author_email='nishantamil@gmail.com',
     description='A Python application that provides web scraping capabilities, including fetching Google and Yelp reviews.',
-    long_description=long_description,  # Add this line
-    long_description_content_type='text/markdown',  # Specify the content type if using Markdown
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/arjunlimat/pydatascraper',
     classifiers=[
         'Programming Language :: Python :: 3',

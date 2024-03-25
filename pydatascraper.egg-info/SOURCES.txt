@@ -1,9 +1,10 @@
 LICENSE
 README.md
 setup.py
+pydatascraper/init.py
+pydatascraper/pyscraper.py
 pydatascraper.egg-info/PKG-INFO
 pydatascraper.egg-info/SOURCES.txt
 pydatascraper.egg-info/dependency_links.txt
-pydatascraper.egg-info/entry_points.txt
 pydatascraper.egg-info/requires.txt
 pydatascraper.egg-info/top_level.txt

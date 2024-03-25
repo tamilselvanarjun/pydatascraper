@@ -1,2 +1,0 @@
-[console_scripts]
-pydatascraper = pydatascraper.models:main
