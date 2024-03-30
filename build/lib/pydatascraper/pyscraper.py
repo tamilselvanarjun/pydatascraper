@@ -508,7 +508,7 @@ def location_parser(urls):
                     else:
                         data = method(url, soup, td, branches)
                 except TypeError:
-                    # Can't handle methods with required arguments
+                    # Can't handle methods with required arguments.
                     pass
                 if data is None:
                     pass
@@ -573,7 +573,7 @@ def single_url(soup):
                 except:
                     pass
 
-# Change the label text
+# Change the label text.
 def get_categories():
     if entry1.get():
         url = entry1.get()
