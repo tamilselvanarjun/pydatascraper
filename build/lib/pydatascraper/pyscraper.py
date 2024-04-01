@@ -312,6 +312,9 @@ class locations:
                 if h3 in all_tags:
                     try:
                         if all_div.h3.text in service and all_div.h3.text not in adder:
+                            #adder.append(all_div.h3.text) 
+                            #print(list(zip([all_div.h3.text], [all_div.p.text]))) 
+                            #df = pd.DataFrame(list(zip([all_div.h3.text], [all_div.p.text])) ,columns = cols)
                             
                             sample_text = all_div.p.text
                             address = sample_text.split('\n')[0].split(',')[0]
@@ -1103,10 +1106,10 @@ def main():
             "Open Street Map"
         ]
 
-    # Set the background color to blue
+    # Set the background color to blue.
     root.configure(bg='lightgreen')
 
-    # Set the border color to red
+    # Set the border color to red.
     root.configure(bd=10, highlightbackground='red')
     txt = 'AI Web Data Parser'
     lbl = Label(root, text=txt, font='Bell 24 bold', fg='black', bg='orange', width=20)
