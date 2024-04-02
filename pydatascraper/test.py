@@ -25,6 +25,19 @@ class TestGetOptions(unittest.TestCase):
         result = get_options(scrambled, flag, totals, last)
         self.assertEqual(result, [])
 
+    def test_get_options_with_edge_case_input(self):
+        """Test get_options function with edge case input.
+        This test case checks the behavior of the get_options function with an input that's less common or an edge case.
+        """
+        scrambled = "abcxyz"
+        flag = False
+        totals = []
+        last = ''
+        result = get_options(scrambled, flag, totals, last)
+        expected = [] 
+        self.assertEqual(result, expected, "Edge case input 'abcxyz' did not return the expected empty list")
+
+
 class TestLocations(unittest.TestCase):
     def test_child_tree1_with_valid_input(self):
         """Test child_tree1 function with valid input.
