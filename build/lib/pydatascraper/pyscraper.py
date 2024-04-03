@@ -25,7 +25,7 @@ import logging
 # Logging is set to the INFO level, capturing informational messages, warnings, and errors.
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-
+# This is a modification for demonstration purposes on the main branch.
 
 # This function 'get_options' serves as the core of the word finding logic. It is designed to recursively search
 # through a dictionary of words, attempting to find all possible words that can be formed starting with a given
