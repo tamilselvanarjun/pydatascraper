@@ -19,25 +19,55 @@ from urllib.request import urlopen
 import tkinter.messagebox
 from tkinter import Tk, Text, Scrollbar
 from tkinter import Tk, Label, OptionMenu, StringVar, Button, font
+# Adding 'logging' module for detailed logging across the module.
+import logging
+# This setup configures the logger to display the time, log level, and message of log entries.
+# Logging is set to the INFO level, capturing informational messages, warnings, and errors.
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 
-
-
+# This function 'get_options' serves as the core of the word finding logic. It is designed to recursively search
+# through a dictionary of words, attempting to find all possible words that can be formed starting with a given
+# scrambled string of letters. The function operates by checking if the current scrambled string matches the beginning
+# of any words in the dictionary. If matches are found, it peels off the matching segment and recursively searches
+# the remaining string until no more matches are found or the string is completely resolved. The 'flag' parameter
+# is used to signal the completion of the process, and 'totals' collects all successfully matched words during
+# the recursion. The 'last' parameter is intended for future extensions where tracking the last found word might be necessary.
 def get_options(scrambled, flag, totals, last):
+    """
+    Recursively finds possible words that start with the 'scrambled' letters from a dictionary.
+    
+    Parameters:
+    scrambled (str): The scrambled letters to match words with.
+    flag (bool): A flag to indicate whether to stop recursion and return the 'totals'.
+    totals (list): Accumulator for collecting possible words found in the dictionary.
+    last (str): The last word added to 'totals'. Unused in this implementation but could be useful for extensions.
+    
+    Returns:
+    list: A list of possible words that start with the 'scrambled' letters.
+    """
+    
+    # Load the dictionary from a text file. Each word is on a new line.
     dictionary = [i.strip('\n') for i in open('the_file.txt')]
     if flag:
+        # If flag is True, return the accumulated totals.
         return totals
     else:
+        # Find words in the dictionary that start with 'scrambled'.
         new_list = [i for i in dictionary if scrambled.startswith(i)]
         if new_list:
-            possible_word = new_list[-1]
+            possible_word = new_list[-1]  # Assuming the last word is the most suitable match.
             new_totals = totals
-            new_totals.append(possible_word)
-            new_scrambled = scrambled[len(possible_word):]
+            new_totals.append(possible_word)  # Add the found word to the list of totals.
+            new_scrambled = scrambled[len(possible_word):]  # Remove the found word from the scrambled letters.
+            # Recur with the updated parameters.
             return get_options(new_scrambled, False, new_totals, possible_word)
         else:
+            # If no words are found, log this event and return an empty list.
+            logging.info(f"No words found starting with: {scrambled}")
             return get_options("", True, totals, '')
+        
 class locations:
     #https://www.marianilandscape.com/where-we-are/
     def child_tree1(url, soup, td, branches):
